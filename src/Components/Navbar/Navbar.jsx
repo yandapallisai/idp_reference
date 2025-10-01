@@ -80,11 +80,13 @@ const dropdownData = {
   "Find-a-course": {
     path: "/pages/white-link/Find1",
     items: [
-      { label: "Undergraduate", path: "/pages/white-link/Find1" },
-      { label: "Postgraduate", path: "/pages/white-link/Find1" },
-      { label: "Diploma", path: "/pages/white-link/Find1" },
-      { label: "Certificate", path: "/pages/white-link/Find1" },
-      { label: "Short Courses", path: "/pages/white-link/Find1" },
+      { label: "Course Advice", path: "/pages/CourseA" },
+      { label: "Courses with Instant Offer", path: "/pages/white-link/Find1" },
+      { label: "Study Abroad cources", path: "/pages/white-link/Find1" },
+      { label: "Find scholorships", path: "/pages/white-link/Find1" },
+      { label: "Find Universities", path: "/pages/white-link/Find1" },
+      { label: "Universities Ranking", path: "/pages/white-link/Find1" },
+      { label: "Complete University Guide", path: "/pages/white-link/Find1" },
     ],
   },
   IELTS: {

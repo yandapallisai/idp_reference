@@ -28,6 +28,8 @@ import SignIN from "./pages/white-link/Sign In/SignIN";
 import Import from "./Components/Implinks/Import";
 import BlueNav from "./Components/bLUE-nav/BlueNav";
 import NewAndA from "./pages/black-link/NewAndA";
+import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
+import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
 
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -75,7 +77,27 @@ export default function App() {
             </>
           }
         />
-
+        <Route
+          path="/pages/CourseA"
+          element={
+            <>
+              <Navbar />
+              <CourseA/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/FindC"
+          element={
+            <>
+              <Navbar />
+              <FindC/>
+              <Footer />
+            </>
+          }
+          />
         {/* Black-link Pages */}
         <Route
           path="/pages/Events"
@@ -123,13 +145,13 @@ export default function App() {
             </>
           }
         />
-
+        
         {/* White-link Pages (use layout) */}
         <Route path="/pages/white-link/StudyAb" element={<WhiteLinkLayout><StudyAb /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
-        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/SignIN" element={<WhiteLinkLayout><SignIN /></WhiteLinkLayout>} />
 
