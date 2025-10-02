@@ -140,7 +140,7 @@ const Navbar = () => {
       {/* Top Black Bar with quick links */}
      
      {/* Top Black Bar with quick links */}
-<div className="black-container" style={{ position: "sticky", top: 0, zIndex: 9999 }}>
+<div className="black-container" style={{ position: "relative",  zIndex: 9999 }}>
   <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
     <li className="black-li">
       <Link to="/pages/NewAndA">News and articles</Link>
