@@ -1,25 +1,36 @@
 /* ============================= */
 /* Top Black Bar */
 /* ============================= */
+*{
+  margin: 0%;
+  padding: 0%;
+}
 .black-container {
+position: sticky;
   background-color: #444444;
-  padding: 17px 25px;
+  padding: 15px 23px;
+  /* position: relative; */
 }
 
 .black-links {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 
 .black-links li {
-  margin-left: 20px;
+  display: flex;              /* makes li a flex container */
+  align-items: center;  
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
   transition: color 0.3s;
+ 
+  
 }
 
 .black-li:hover {
@@ -29,14 +40,17 @@
 .black-li1:hover {
   background-color: rgb(25, 16, 122);
   color: #fff;
-  border-radius: 4px;
-  padding: 5px 10px;
+  border-radius: 4px; 
 }
 
 .black-links li:not(:last-child)::after {
   content: "|";
   margin-left: 10px;
   color: white;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;            
+  vertical-align: middle; 
 }
 
 /* Hide top black bar on mobile */
@@ -50,15 +64,19 @@
 /* Main Navbar */
 /* ============================= */
 .main-navbar {
+    position: sticky;
+  /* position: fixed; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 18px 25px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  position: relative;
+  width:100%;
   z-index: 1003; /* Higher than mobile sidebar to stay on top */
 }
+
+
 
 .logo {
   height: 30px;
