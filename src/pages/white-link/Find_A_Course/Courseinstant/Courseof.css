@@ -1,0 +1,37 @@
+.Courseof-container {
+    padding: 40px;
+    padding-left: 90px;
+}
+.Courseof-t {
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.Courseof-button {
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 21px 38px;
+    font-weight: bold;
+}
+.Courseof-button:hover {
+    background-color: #29aae6;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.Courseof-b1 {
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid black;
+    border-radius: 8px;
+    margin-left: 50px;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.Courseof-b1:hover {
+       background-color: rgb(20, 50, 172);
+       color: aliceblue;
+
+}

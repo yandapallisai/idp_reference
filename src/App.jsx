@@ -7,7 +7,6 @@ import Hero from "./Components/Hero.jsx/Hero";
 import Contact from "./Components/Contact/Contact";
 import Services from "./Components/services/Services";
 import Destinations from "./Components/Destination/Destinations";
-
 import English from "./pages/black-link/English";
 import Events from "./pages/black-link/Events";
 import Find from "./pages/black-link/Find";
@@ -22,7 +21,6 @@ import StudyAb from "./pages/white-link/Study_Abroad/StudyAb";
 import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
 import IELTS from "./pages/white-link/IELTS/IELTS";
 import Student from "./pages/white-link/Student Essentials/Student";
-import Find1 from "./pages/white-link/Find_A_Course/Find1";
 import Avail from "./pages/white-link/Avail Free/Avail";
 import SignIN from "./pages/white-link/Sign In/SignIN";
 import Import from "./Components/Implinks/Import";
@@ -30,7 +28,7 @@ import BlueNav from "./Components/bLUE-nav/BlueNav";
 import NewAndA from "./pages/black-link/NewAndA";
 import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
 import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
-
+import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -88,15 +86,30 @@ export default function App() {
             </>
           }
           />
+            <Route
+          path="/pages/Courseof"
+          element={
+            <>
+              <Navbar />
+              <Courseof />
+              <Fastlane />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
           <Route
           path="/pages/FindC"
           element={
             <>
               <Navbar />
               <FindC/>
+              <Fastlane />
+              <Contact />
               <Footer />
             </>
           }
+          
           />
         {/* Black-link Pages */}
         <Route
@@ -151,7 +164,6 @@ export default function App() {
         <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
-        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/SignIN" element={<WhiteLinkLayout><SignIN /></WhiteLinkLayout>} />
 

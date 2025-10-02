@@ -81,7 +81,7 @@ const dropdownData = {
     path: "/pages/white-link/Find1",
     items: [
       { label: "Course Advice", path: "/pages/CourseA" },
-      { label: "Courses with Instant Offer", path: "/pages/white-link/Find1" },
+      { label: "Courses with Instant Offer", path: "/pages/Courseof" },
       { label: "Study Abroad cources", path: "/pages/white-link/Find1" },
       { label: "Find scholorships", path: "/pages/white-link/Find1" },
       { label: "Find Universities", path: "/pages/white-link/Find1" },
