@@ -29,6 +29,10 @@ import Import from "./Components/Implinks/Import";
 import BlueNav from "./Components/bLUE-nav/BlueNav";
 import NewAndA from "./pages/black-link/NewAndA";
 
+
+import StudyAbNavbar from "./pages/white-link/Study_Abroad/StudyAbNavbar";
+import StdyAbVid from "./pages/white-link/Study_Abroad/StdyAbVid";
+import StdyAbcnt from "./pages/white-link/Study_Abroad/StdyAbcnt";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -125,7 +129,20 @@ export default function App() {
         />
 
         {/* White-link Pages (use layout) */}
-        <Route path="/pages/white-link/StudyAb" element={<WhiteLinkLayout><StudyAb /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/StudyAb" element={
+          <>
+            <Navbar />
+            <StudyAbNavbar />
+            <StudyAb />
+            <StdyAbVid/>
+            <StdyAbcnt />
+            <NewAndA />
+            <Contact />
+            <Footer />
+          </>
+        } />
+
+
         <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
