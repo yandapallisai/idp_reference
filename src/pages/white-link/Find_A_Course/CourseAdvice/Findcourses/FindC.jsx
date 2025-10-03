@@ -22,6 +22,8 @@ export default function FindC() {
             <img src="/assets/guide image.png" alt="Student" />
        </div>
        
+       
+       <div className="course-cards-container">
        <div className="FindC-boxes">
 
         <div className="FindC-box1">
@@ -58,6 +60,47 @@ export default function FindC() {
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
                     <span>AUD52360 (2025) <span className="FindC-info-icon"></span></span>
+                </div>
+            </div>
+            
+            <div className="FindC-action-buttons">
+                <button className="FindC-secondary-btn">View details</button>
+            </div>
+        </div>
+        <div className="FindC-box1">
+            <div className="FindC-card-header">
+                <div className="FindC-heart-icon">♡</div>
+            </div>
+            <div className="FindC-university-logo">
+                <div className="FindC-logo-rivier">THE UNIVERSITY OF MELBOURNE</div>
+            </div>
+            <h1 className="FindC-program-title">Bachelor of Science</h1>
+            <p className="FindC-university-name">THE UNIVERSITY OF MELBOURNE</p>
+            
+            <div className="FindC-program-details">
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">📊</span>
+                    <span>THE World Ranking: 39</span>
+                </div>
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">🎓</span>
+                    <span>Bachelor Degree</span>
+                </div>
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">🇦🇺</span>
+                    <span>Parkville, Australia</span>
+                </div>
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">📅</span>
+                    <span>Next intake: 02.03.2026</span>
+                </div>
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">✓</span>
+                    <span>Entry Score: IELTS 6.5</span>
+                </div>
+                <div className="FindC-detail-item">
+                    <span className="FindC-detail-icon">$</span>
+                    <span>USD52944 (2025) </span>
                 </div>
             </div>
             
@@ -170,7 +213,7 @@ export default function FindC() {
                 </div>
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
-                    <span>AUD58800 (2025) <span className="FindC-info-icon"></span></span>
+                    <span>AUD58800 (2025)</span>
                 </div>
             </div>
             
@@ -212,7 +255,7 @@ export default function FindC() {
                 </div>
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
-                    <span>AUD56500 (2025) <span className="FindC-info-icon"></span></span>
+                    <span>AUD56500 (2025) </span>
                 </div>
             </div>
             
@@ -249,10 +292,9 @@ export default function FindC() {
                 </div>
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
-                    <span>USD13061 (2025) <span className="FindC-info-icon"></span></span>
+                    <span>USD13061 (2025) </span>
                 </div>
             </div>
-            
             <div className="FindC-action-buttons">
                 <button className="FindC-secondary-btn">View details</button>
             </div>
@@ -282,7 +324,7 @@ export default function FindC() {
                 </div>
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
-                    <span>AUD18488 (2025) <span className="FindC-info-icon"></span></span>
+                    <span>AUD18488 (2025) </span>
                 </div>
             </div>
             
@@ -323,7 +365,7 @@ export default function FindC() {
                 </div>
                 <div className="FindC-detail-item">
                     <span className="FindC-detail-icon">$</span>
-                    <span>USD52944 (2025) <span className="FindC-info-icon"></span></span>
+                    <span>USD52944 (2025) </span>
                 </div>
             </div>
             
@@ -332,6 +374,9 @@ export default function FindC() {
             </div>
         </div>
         </div>
+        </div>
+        
+       <div className="text-content-container">
        <div className="FindC-more">
         <p>With so many courses and universities to choose from, deciding where and what to study abroad can be a daunting task. With comprehensive course data from leading colleges and universities across the world, we are here to guide you through the entire process. Our experienced counsellors work with you to understand your goals and aspirations to help find a study abroad program that perfectly fits for you. Our course finder helps you discover thousands of courses from leading institutions across Australia, Canada, Ireland, New Zealand, the United Kingdom and the United States.</p>
         </div>
@@ -368,6 +413,6 @@ export default function FindC() {
 </div>
         </div>
        </div>
-
+</div>
     );
 }

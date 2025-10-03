@@ -29,6 +29,8 @@ import NewAndA from "./pages/black-link/NewAndA";
 import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
 import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
 import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
+import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
+import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -81,6 +83,28 @@ export default function App() {
             <>
               <Navbar />
               <CourseA/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/Scholar"
+          element={
+            <>
+              <Navbar />
+              <Scholar/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/Sabroad"
+          element={
+            <>
+              <Navbar />
+              <Sabroad />
               <Contact />
               <Footer />
             </>

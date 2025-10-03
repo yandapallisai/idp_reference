@@ -82,8 +82,8 @@ const dropdownData = {
     items: [
       { label: "Course Advice", path: "/pages/CourseA" },
       { label: "Courses with Instant Offer", path: "/pages/Courseof" },
-      { label: "Study Abroad cources", path: "/pages/white-link/Find1" },
-      { label: "Find scholorships", path: "/pages/white-link/Find1" },
+      { label: "Study Abroad cources", path: "/pages/Sabroad" },
+      { label: "Find scholorships", path: "/pages/white-link/Scholar" },
       { label: "Find Universities", path: "/pages/white-link/Find1" },
       { label: "Universities Ranking", path: "/pages/white-link/Find1" },
       { label: "Complete University Guide", path: "/pages/white-link/Find1" },

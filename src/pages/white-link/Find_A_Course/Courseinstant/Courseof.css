@@ -1,6 +1,7 @@
 .Courseof-container {
-    padding: 40px;
+    padding: 35px;
     padding-left: 90px;
+    background-color: rgb(225, 248, 255);
 }
 .Courseof-t {
     font-weight: bold;
@@ -34,4 +35,122 @@
        background-color: rgb(20, 50, 172);
        color: aliceblue;
 
+}
+.Courseof-detail {
+    color :black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.Courseof-detail:hover {
+    color: blue;
+    cursor: pointer;
+}
+.Courseof-boxes {
+    margin: 30px auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+}
+.Courseof-box1 {
+    margin: 0;
+    height: auto;
+    min-height: 520px;
+    background-color:  #f7f8f8;
+    font-size: 17px;
+    text-align: left;
+   
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(130, 199, 255, 0.1);
+    padding: 23px;
+}
+.Courseof-box1:hover {
+    box-shadow: 5px 10px 20px rgba(11, 112, 244, 0.15);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    border-color: #000000;
+    color: linear-gradient(90deg, #ffffff, #91daf1);
+}
+.Courseof-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.Courseof-heart-icon {
+    font-size: 27px;
+    color: #dd1f1f;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.Courseof-University-logo {
+    
+    margin-bottom: 10px;
+}
+.Courseof-logo-m {
+    background-color: rgb(255, 255, 255);
+    color: #040b1e;
+    padding: 8px 12px;
+    border: 1px solid #030a1d;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.Courseof-University-name {
+    font-size: 13px;
+    color: #050303;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0px 20px 0;
+    font-weight: 600;
+}
+.Courseof-program-details {
+   margin: 20px 7px;
+   flex-grow: 1;
+}
+.Course-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+}
+.Course-detail-icon {
+     margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.Courseof-action-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Courseof-btn {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.Courseof-btn:hover {
+    border:1px solid #027bf4;
+    color: #000000;
+    
 }
