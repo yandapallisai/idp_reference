@@ -31,6 +31,7 @@ import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/Fin
 import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
 import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
+import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -94,6 +95,7 @@ export default function App() {
             <>
               <Navbar />
               <Scholar/>
+              <IDP />
               <Contact />
               <Footer />
             </>
@@ -106,6 +108,17 @@ export default function App() {
               <Navbar />
               <Sabroad />
               <Contact />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/FindU"
+          element={
+            <>
+              <Navbar />
+              <FindU/>
+              <Fastlane />
               <Footer />
             </>
           }
