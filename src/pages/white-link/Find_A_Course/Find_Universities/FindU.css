@@ -158,3 +158,50 @@
     color: #000000;
     
 }
+.FIndU-Arrs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+    padding-bottom: 50px; 
+}
+.FIndU-page-link {
+    min-width: 34px;
+    height: 34px;
+    margin: 0 4px;
+    padding: 0 5px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.FIndU-page-link.FIndU-active {
+    background-color: #e9ecef; 
+    color: #343a40; 
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.FIndU-page-link.FIndU-current {
+    background-color: #f7f7f7; 
+    color: #343a40;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.FIndU-page-link.FIndU-disabled {
+    color: #adb5bd; 
+    cursor: default;
+    pointer-events: none; 
+}
+.FIndU-page-link {
+    background-color: transparent;
+    font-weight: 600;
+    padding: 0 6px;
+    cursor: pointer;
+}

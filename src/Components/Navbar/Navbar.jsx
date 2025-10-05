@@ -37,6 +37,20 @@ const styles = {
     cursor: "pointer",
     position: "relative",
   },
+  secondLevelMenu: {
+    position: "absolute",
+    top: 0,
+    left: "100%",
+    backgroundColor: "#f5f5f5",
+    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
+    listStyle: "none",
+    padding: "10px 0",
+    marginTop: 0,
+    borderRadius: "4px",
+    zIndex: 1001,
+    minWidth: 260,
+    height: "100%",
+  },
 };
 const balckDropworn ={"Find-us": {
     path: "/pages/Find",
@@ -85,8 +99,8 @@ const dropdownData = {
       { label: "Study Abroad cources", path: "/pages/Sabroad" },
       { label: "Find scholorships", path: "/pages/Scholar" },
       { label: "Find Universities", path: "/pages/FindU" },
-      { label: "Universities Ranking", path: "/pages/white-link/Find1" },
-      { label: "Complete University Guide", path: "/pages/white-link/Find1" },
+      { label: "University Rankings - THE", path: "/pages/Uranking" },
+      { label: "Complete University Guide (CUG)", path: "/pages/white-link/Find1" },
     ],
   },
   IELTS: {
@@ -109,9 +123,20 @@ const dropdownData = {
   },
 };
 
+// Second-level submenu for specific items
+const submenuData = {
+  "University Rankings - THE": [
+    { label: "QS World University Rankings", path: "/pages/white-link/Find1" },
+  ],
+};
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSecondLevel, setOpenSecondLevel] = useState(null);
+  const [dropdownHeight, setDropdownHeight] = useState(null);
+
+  const dropdownRef = React.useRef(null);
 
   const toggleDropdown = (key) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
@@ -119,6 +144,7 @@ const Navbar = () => {
 
   const closeDropdown = () => {
     setOpenDropdown(null);
+    setOpenSecondLevel(null);
   };
 
   const toggleMobileMenu = () => {
@@ -136,6 +162,14 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (openDropdown && dropdownRef.current) {
+      setDropdownHeight(dropdownRef.current.clientHeight);
+    } else {
+      setDropdownHeight(null);
+    }
+  }, [openDropdown]);
 
   return (
     <>
@@ -232,9 +266,14 @@ const Navbar = () => {
               </button>
 
               {openDropdown === key && (
-                <ul style={styles.dropdownMenu}>
+                <ul style={styles.dropdownMenu} ref={dropdownRef}>
                   {items.items.map((item, idx) => (
-                    <li key={idx} style={styles.dropdownItem}>
+                    <li
+                      key={idx}
+                      style={styles.dropdownItem}
+                      onMouseEnter={() => setOpenSecondLevel(item.label)}
+                      onMouseLeave={() => setOpenSecondLevel(null)}
+                    >
                       <Link
                         to={item.path}
                         onClick={closeDropdown}
@@ -242,6 +281,25 @@ const Navbar = () => {
                       >
                         {item.label}
                       </Link>
+
+                      {submenuData[item.label] && openSecondLevel === item.label && (
+                        <ul style={{
+                          ...styles.secondLevelMenu,
+                          height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
+                        }}>
+                          {submenuData[item.label].map((sub, sIdx) => (
+                            <li key={sIdx} style={styles.dropdownItem}>
+                              <Link
+                                to={sub.path}
+                                onClick={closeDropdown}
+                                style={{ color: "#161111ff", textDecoration: "none" }}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>

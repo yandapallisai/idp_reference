@@ -465,6 +465,27 @@ export default function FindU() {
         </div>
         
         </div>
+<div className="FIndU-Arrs">
+    <span className="FIndU-page-link FIndU-disabled sizes">«</span> 
+    <span className="FIndU-page-link FIndU-disabled sizes">‹</span> 
+    <span className="FIndU-page-link FIndU-active">1</span>
+    <span className="FIndU-page-link ">2</span>
+    <span className="FIndU-page-link">3</span>
+    <span className="FIndU-page-link">...</span>
+    <span className="FIndU-page-link">6</span>
+    <span className="FIndU-page-link">...</span>
+    <span className="FIndU-page-link">10</span>
+    <span className="FIndU-page-link">11</span>
+    <span className="FIndU-page-link">12</span>
+    <span className="FIndU-page-link sizes">›</span>
+    <span className="FIndU-page-link sizes">»</span>
+</div>
+        
+        
+        
+        
+        
+        
         </div>
         
         

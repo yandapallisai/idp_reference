@@ -32,6 +32,8 @@ import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
 import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
 import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
+import Oneac from "./Components/On_signin_banner/Oneac";
+import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -118,6 +120,7 @@ export default function App() {
             <>
               <Navbar />
               <FindU/>
+              <Oneac />
               <Fastlane />
               <Footer />
             </>
@@ -141,12 +144,23 @@ export default function App() {
             <>
               <Navbar />
               <FindC/>
+              <Oneac />
               <Fastlane />
               <Contact />
               <Footer />
             </>
           }
-          
+          />
+          <Route
+          path="/pages/Uranking"
+          element={
+            <>
+              <Navbar />
+              <Uranking/>
+              <Contact />
+              <Footer />
+            </>
+          }
           />
         {/* Black-link Pages */}
         <Route

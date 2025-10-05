@@ -17,7 +17,7 @@ export default function FindC() {
         </div>
         <div className="FindC-b1">
             <h3>Not seeing the perfect Course?</h3>
-            <p>Complete 4 easy questions to unlock course matches designed just for you!</p>
+            <p className="see">Complete 4 easy questions to unlock course matches designed just for you!</p>
            <Link className="FindC-button1">See my matches</Link>
             </div>
         <div className="FindC-img">
