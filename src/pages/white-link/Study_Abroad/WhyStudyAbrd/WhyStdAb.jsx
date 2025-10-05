@@ -6,3 +6,5 @@ function WhyStdAb() {
     </div>
   );
 }
+
+export default WhyStdAb;
