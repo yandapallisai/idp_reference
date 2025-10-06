@@ -100,15 +100,15 @@ const dropdownData = {
       { label: "Find scholorships", path: "/pages/Scholar" },
       { label: "Find Universities", path: "/pages/FindU" },
       { label: "University Rankings - THE", path: "/pages/Uranking" },
-      { label: "Complete University Guide (CUG)", path: "/pages/white-link/Find1" },
+      { label: "Complete University Guide (CUG)", path: "/pages/Cug" },
     ],
   },
-  IELTS: {
+  "IELTS": {
     path: "/pages/white-link/IELTS",
     items: [
-      { label: "IELTS Academic", path: "/pages/white-link/IELTS" },
-      { label: "IELTS General Training", path: "/pages/white-link/IELTS" },
-      { label: "IELTS Preparation", path: "/pages/white-link/IELTS" },
+      { label: "Book an IELTS Test", path: "/pages/Book" },
+      { label: "What is IELTS?", path: "/pages/what" },
+      { label: "IELTS Preparation", path: "/pages/Prep" },
       { label: "Test Dates", path: "/pages/white-link/IELTS" },
     ],
   },
@@ -126,7 +126,7 @@ const dropdownData = {
 // Second-level submenu for specific items
 const submenuData = {
   "University Rankings - THE": [
-    { label: "QS World University Rankings", path: "/pages/white-link/Find1" },
+    { label: "QS World University Rankings", path: "/pages/Qsworld" },
   ],
 };
 

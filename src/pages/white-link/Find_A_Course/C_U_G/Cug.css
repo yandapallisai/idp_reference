@@ -1,4 +1,4 @@
-.Uranking {
+.cug {
     background-color: #f1f1f1;
     padding: 40px 0 80px 0;
     
@@ -156,4 +156,9 @@
 .details-btn:hover {
     background: #17337a;
     color: #ffffff;
+}
+.uni-rank {
+    margin: 6px 0 0 0;
+    color: #4a4c51;
+    font-size: 15px;
 }

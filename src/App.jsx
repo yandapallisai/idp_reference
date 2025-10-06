@@ -19,7 +19,6 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import StudyAb from "./pages/white-link/Study_Abroad/StudyAb";
 import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
-import IELTS from "./pages/white-link/IELTS/IELTS";
 import Student from "./pages/white-link/Student Essentials/Student";
 import Avail from "./pages/white-link/Avail Free/Avail";
 import SignIN from "./pages/white-link/Sign In/SignIN";
@@ -34,6 +33,11 @@ import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
 import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
 import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
+import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
+import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
+import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
+import What from "./pages/white-link/IELTS/What_is_IELTS/What";
+import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -157,6 +161,62 @@ export default function App() {
             <>
               <Navbar />
               <Uranking/>
+              <Oneac/>
+              <Contact />
+              <Footer />
+            </>
+          }
+           />
+          <Route
+          path="/pages/Qsworld"
+          element={
+            <>
+              <Navbar />
+              <Qsworld/>
+              <Contact />
+              <Footer />
+            </>
+          }
+           />
+          <Route
+          path="/pages/Cug"
+          element={
+            <>
+              <Navbar />
+              <Cug/>
+              <Oneac/>
+              <Contact />
+              <Footer />
+            </>
+          }
+           />
+          <Route
+          path="/pages/What"
+          element={
+            <>
+              <Navbar />
+              <What/>
+              <Contact />
+              <Footer />
+            </>
+          }
+            />
+          <Route
+          path="/pages/Book"
+          element={
+            <>
+
+              <Book/>
+              <Footer />
+            </>
+          }
+            />
+          <Route
+          path="/pages/Prep"
+          element={
+            <>
+              <Navbar />
+              <Prep/>
               <Contact />
               <Footer />
             </>
@@ -213,7 +273,6 @@ export default function App() {
         {/* White-link Pages (use layout) */}
         <Route path="/pages/white-link/StudyAb" element={<WhiteLinkLayout><StudyAb /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
-        <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/SignIN" element={<WhiteLinkLayout><SignIN /></WhiteLinkLayout>} />
