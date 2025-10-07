@@ -18,21 +18,48 @@ import Aboutidp from "./Components/IDP-P/Aboutidp";
 import StudySteps from "./Components/StudySteps/StudySteps";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
-import StudyAb from "./pages/white-link/Study_Abroad/StudyAb";
+import StudyAb from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb";
 import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
 import IELTS from "./pages/white-link/IELTS/IELTS";
-import Student from "./pages/white-link/Student Essentials/Student";
+import Student from "./pages/white-link/Student_Essentials/Student";
 import Find1 from "./pages/white-link/Find_A_Course/Find1";
-import Avail from "./pages/white-link/Avail Free/Avail";
-import SignIN from "./pages/white-link/Sign In/SignIN";
+import Avail from "./pages/white-link/Avail_Free/Avail";
+import SignIN from "./pages/white-link/Sign_In/SignIN";
 import Import from "./Components/Implinks/Import";
 import BlueNav from "./Components/bLUE-nav/BlueNav";
 import NewAndA from "./pages/black-link/NewAndA";
 
 
-import StudyAbNavbar from "./pages/white-link/Study_Abroad/StudyAbNavbar";
-import StdyAbVid from "./pages/white-link/Study_Abroad/StdyAbVid";
-import StdyAbcnt from "./pages/white-link/Study_Abroad/StdyAbcnt";
+import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
+import StdyAbVid from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbVid";
+import StdyAbcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbcnt";
+import WhereStdhero from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdhero";
+import WhereStdyVid from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdyvid";
+import WhereStdyAbcnt from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdycnt";
+import HowtoApplyhero from "./pages/white-link/Study_Abroad/how_do_i_apply/HowtoApplyhero";
+import HowDoApplyVid from "./pages/white-link/Study_Abroad/how_do_i_apply/howdoaplyvid";
+import Howdoapplycnt from "./pages/white-link/Study_Abroad/how_do_i_apply/Howdoapplycnt";
+import AfterOfferhero from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferhero";
+import AfterOfferVid from "./pages/white-link/Study_Abroad/AfterOffe/AfterOffervid";
+
+import Preparetodeparthero from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodeparthero";
+import Preparetodepartvid from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodepartvid";
+
+import Arriveandthrivehero from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivehero";
+import Arriveandthrivevid from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivevid";
+import StdAbhlp from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdAbhlp";
+import FrequentlyAskedQuestions from "./pages/white-link/Study_Abroad/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
+import StdyabroadOptions from "./pages/white-link/Study_Abroad/Where_to_study_abroad/StdyabroadOptions";
+import HowToApplyHelp from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyHelp";
+import HowToApplyFAQ from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyFAQ";
+import AfterOfferHelp from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferHelp";
+import AfterOfferFAQ from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferFAQ";
+import Preparetohlp from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetohlp";
+import PrepareFAQ from "./pages/white-link/Study_Abroad/Prepare_to_depart/PrepareFAQ";
+import Arrivethrivehlp from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arrivethrivehlp";
+import ArrivethriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArrivethriveFAQ";
+import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
+
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -136,6 +163,9 @@ export default function App() {
             <StudyAb />
             <StdyAbVid/>
             <StdyAbcnt />
+            <StdAbhlp />
+            <Askidp/>
+            <FrequentlyAskedQuestions />
             <NewAndA />
             <Contact />
             <Footer />
@@ -143,7 +173,101 @@ export default function App() {
         } />
 
 
+        
+        <Route
+          path="/pages/white-link/where-to-study-abroad"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <WhereStdhero />
+              <WhereStdyVid/>
+              <WhereStdyAbcnt/>
+              <StdyabroadOptions />
+                <Askidp/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/pages/white-link/how-to-apply"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <HowtoApplyhero />
+              <HowDoApplyVid />
+              <Howdoapplycnt />
+              <HowToApplyHelp/>
+                <Askidp/>
+              <HowToApplyFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/white-link/after-offer"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <AfterOfferhero />
+              <AfterOfferVid />
+              <AfterOfferHelp />
+                <Askidp/>
+              <AfterOfferFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/white-link/prepare-to-depart"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <Preparetodeparthero />
+              <Preparetodepartvid />
+              <Preparetohlp/>
+                <Askidp/>
+              <PrepareFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/white-link/arrive-and-thrive"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <Arriveandthrivehero />
+              <Arriveandthrivevid />
+              <Arrivethrivehlp/>
+                <Askidp/>
+              <ArrivethriveFAQ />
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        
+
+
         <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
+
+
+
         <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
