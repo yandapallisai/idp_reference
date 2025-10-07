@@ -59,6 +59,8 @@ import PrepareFAQ from "./pages/white-link/Study_Abroad/Prepare_to_depart/Prepar
 import Arrivethrivehlp from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arrivethrivehlp";
 import ArrivethriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArrivethriveFAQ";
 import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
+import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
+import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
 
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -264,7 +266,18 @@ export default function App() {
         
 
 
-        <Route path="/pages/white-link/StudyDs" element={<WhiteLinkLayout><StudyDs /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/StudyDs" element={
+          <>
+            <Navbar />
+            <StudyDs />
+            <ExploreAbroadPrgms />
+            <Studydestcnt />
+            <Askidp/>
+            <Contact />
+            <Footer />
+            
+            </>
+          } />
 
 
 
