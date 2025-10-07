@@ -6,11 +6,11 @@ function Preparetohlp () {
 
   const sections = [
     {
-      title: "1. Benefits of studying abroad",
+      title: "1. Who can help me",
       content: (
         <div>
           <p>
-            From quality education, personal growth to career progression, discover how studying abroad can help you succeed through these helpful articles and videos.
+           Download the IDP Live app to refine your search or book a free appointment with an IDP counsellor.
           </p>
           <ul>
             <li>What is studying abroad</li>
@@ -22,7 +22,7 @@ function Preparetohlp () {
       ),
     },
     {
-      title: "2. The study abroad experience",
+      title: "2. Check your eligibility",
       content: (
         <div>
           Learn all about what it’s like to experience life in a different country.
@@ -31,7 +31,7 @@ function Preparetohlp () {
       ),
     },
     {
-      title: "3. Breaking down the steps",
+      title: "3. Check the application guidelines",
       content: (
         <div>
           Not sure where to start? Follow these<ul><li>simple steps</li></ul>
@@ -39,7 +39,7 @@ function Preparetohlp () {
       ),
     },
     {
-      title: "4. Study abroad guide for parents",
+      title: "4. Check English proficiency requirements",
       content: (
         <div>
          Learn more about how you can support your child’s overseas education journey with helpful resources such as articles and videos on what to expect and what it’s like living in each country.
@@ -47,7 +47,7 @@ function Preparetohlp () {
       ),
     },
     {
-      title: "5. Hear from our students",
+      title: "5. Submit your application",
       content: (
         <div>
           <p>
@@ -61,11 +61,10 @@ function Preparetohlp () {
   const handleToggle = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
-
   return (
     <div className="accordion-outer">
       <h2 className="accordion-title">
-        Discover how studying abroad can help you
+        Quick references
       </h2>
       <div className="accordion-list">
         {sections.map((section, idx) => (

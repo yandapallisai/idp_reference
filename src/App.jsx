@@ -49,6 +49,16 @@ import Arriveandthrivehero from "./pages/white-link/Study_Abroad/Arrive_and_thri
 import Arriveandthrivevid from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivevid";
 import StdAbhlp from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdAbhlp";
 import FrequentlyAskedQuestions from "./pages/white-link/Study_Abroad/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
+import StdyabroadOptions from "./pages/white-link/Study_Abroad/Where_to_study_abroad/StdyabroadOptions";
+import HowToApplyHelp from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyHelp";
+import HowToApplyFAQ from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyFAQ";
+import AfterOfferHelp from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferHelp";
+import AfterOfferFAQ from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferFAQ";
+import Preparetohlp from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetohlp";
+import PrepareFAQ from "./pages/white-link/Study_Abroad/Prepare_to_depart/PrepareFAQ";
+import Arrivethrivehlp from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arrivethrivehlp";
+import ArrivethriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArrivethriveFAQ";
+import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
 
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -154,6 +164,7 @@ export default function App() {
             <StdyAbVid/>
             <StdyAbcnt />
             <StdAbhlp />
+            <Askidp/>
             <FrequentlyAskedQuestions />
             <NewAndA />
             <Contact />
@@ -172,6 +183,8 @@ export default function App() {
               <WhereStdhero />
               <WhereStdyVid/>
               <WhereStdyAbcnt/>
+              <StdyabroadOptions />
+                <Askidp/>
               <NewAndA />
               <Contact />
               <Footer />
@@ -188,6 +201,9 @@ export default function App() {
               <HowtoApplyhero />
               <HowDoApplyVid />
               <Howdoapplycnt />
+              <HowToApplyHelp/>
+                <Askidp/>
+              <HowToApplyFAQ/>
               <NewAndA />
               <Contact />
               <Footer />
@@ -202,7 +218,9 @@ export default function App() {
               <StudyAbNavbar />
               <AfterOfferhero />
               <AfterOfferVid />
-             
+              <AfterOfferHelp />
+                <Askidp/>
+              <AfterOfferFAQ/>
               <NewAndA />
               <Contact />
               <Footer />
@@ -217,7 +235,9 @@ export default function App() {
               <StudyAbNavbar />
               <Preparetodeparthero />
               <Preparetodepartvid />
-             
+              <Preparetohlp/>
+                <Askidp/>
+              <PrepareFAQ/>
               <NewAndA />
               <Contact />
               <Footer />
@@ -232,7 +252,9 @@ export default function App() {
               <StudyAbNavbar />
               <Arriveandthrivehero />
               <Arriveandthrivevid />
-              
+              <Arrivethrivehlp/>
+                <Askidp/>
+              <ArrivethriveFAQ />
               <NewAndA />
               <Contact />
               <Footer />
