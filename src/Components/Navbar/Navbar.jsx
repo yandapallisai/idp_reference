@@ -74,8 +74,8 @@ const dropdownData = {
     path: "/pages/white-link/StudyAb",
     items: [
       { label: "Why study abroad?", path: "/pages/white-link/StudyAb" },
-      { label: "Where and what to study?", path: "/pages/white-link/StudyAb" },
-      { label: "How do I apply?", path: "/pages/white-link/StudyAb" },
+      { label: "Where and what to study?", path: "/pages/white-link/where-to-study-abroad" },
+      { label: "How do I apply?", path: "/pages/white-link/how-to-apply" },
       { label: "After receiving an offer", path: "/pages/white-link/StudyAb" },
       { label: "Prepare to depart", path: "/pages/white-link/StudyAb" },
       { label: "Arrive and thrive", path: "/pages/white-link/StudyAb" },
@@ -176,7 +176,7 @@ const Navbar = () => {
       {/* Top Black Bar with quick links */}
      
      {/* Top Black Bar with quick links */}
-<div className="black-container" style={{ position: "sticky", top: 0, zIndex: 9999 }}>
+<div className="black-container" style={{ position: "relative",  zIndex: 9999 }}>
   <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
     <li className="black-li">
       <Link to="/pages/NewAndA">News and articles</Link>
