@@ -1,9 +1,10 @@
 import React from 'react'
-import "./Avail.css"
+import ContactPage from '../../../Components/Contact/Contact'
+
 const Avail = () => {
   return (
     <div>
-      <h1>Avail Free Counselling</h1>
+      <ContactPage />
     </div>
   )
 }

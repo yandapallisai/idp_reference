@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./hero.css";
+import "./Hero.css";
 import heroImg from "../../assets/hero-bg.jpg"; // <-- Make sure this file exists!
 
 const heroData = [
