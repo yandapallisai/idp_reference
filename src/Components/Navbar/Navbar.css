@@ -4,7 +4,6 @@
 .black-container {
   background-color: #444444;
   padding: 17px 25px;
-  position:relative;
 }
 
 .black-links {
@@ -57,10 +56,7 @@
   padding: 20px 30px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top:0%;
-  height:80px;
-  width: 100%;
+  position: relative;
   z-index: 1003; /* Higher than mobile sidebar to stay on top */
 }
 
