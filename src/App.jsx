@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import Services from "./Components/Services/Services";
 import Destinations from "./Components/Destination/Destinations";
-import Hero from "./Components/Hero.jsx/Hero";
+import Hero from "./Components/Hero/Hero"; 
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Import from "./Components/Implinks/Import";
 import Fastlane from "./Components/Fastlane/Fastlane";
@@ -15,15 +15,16 @@ import IDP from "./Components/IdpStudents/IDP";
 import Essentials from "./Components/Essentials/Essentials";
 import Aboutidp from "./Components/IDP-P/Aboutidp";
 import StudySteps from "./Components/StudySteps/StudySteps";
-import BlueNav from "./Components/bLUE-nav/BlueNav";
+import BlueNav from "./Components/bLUE-nav/BlueNav"; 
 
-// Pages
+// Black-Link Pages
 import English from "./pages/black-link/English";
 import Events from "./pages/black-link/Events";
-import Find from "./pages/black-link/Find";
+import Find from "./pages/black-link/Find/Find";
 import NewAndA from "./pages/black-link/NewAndA";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 
+// White-Link Pages
 import IELTS from "./pages/white-link/IELTS/IELTS";
 import Find1 from "./pages/white-link/Find_A_Course/Find1";
 import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
@@ -45,12 +46,15 @@ import EducationLoan from "./pages/white-link/Student_Essentials/StudentEs-Types
 import HealthInsurance from "./pages/white-link/Student_Essentials/StudentEs-Types/Health_Insurance";
 import StudentBanking from "./pages/white-link/Student_Essentials/StudentEs-Types/Student_banking";
 import ForexCards from "./pages/white-link/Student_Essentials/StudentEs-Types/Forex_Cards";
-import GuardianShip from "./pages/white-link/Student_Essentials/StudentEs-Types/Guardian_Ship";
+import Guardian_Ship from "./pages/white-link/Student_Essentials/StudentEs-Types/Guardian_Ship";
 import ISIC from "./pages/white-link/Student_Essentials/StudentEs-Types/ISIC";
 import InternationalSimCards from "./pages/white-link/Student_Essentials/StudentEs-Types/International_SIM_Cards";
 import ServicesSection from "./pages/white-link/Student_Essentials/StudentEssFrom/ServiceSection";
+import EssentialsCards from "./pages/white-link/Student_Essentials/StudentEssFrom/EssentialsCards";
+import MoneyTransfer from "./pages/white-link/Student_Essentials/StudentEs-Types/Money_transfer";
+import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo";
 
-// Layout wrapper for white-link pages
+// ✅ Layout for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
     <Navbar />
@@ -89,15 +93,13 @@ export default function App() {
         <Route
           path="/study/:slug"
           element={
-            <>
-              <Navbar />
+            <WhiteLinkLayout>
               <ComingSoon />
-              <Footer />
-            </>
+            </WhiteLinkLayout>
           }
         />
 
-        {/* ⚫ Black-link Pages */}
+        {/* ⚫ Black-Link Pages */}
         <Route
           path="/pages/Events"
           element={
@@ -133,7 +135,7 @@ export default function App() {
           }
         />
         <Route
-          path="/pages/Find"
+          path="/pages/Find/Find"
           element={
             <>
               <Navbar />
@@ -144,7 +146,7 @@ export default function App() {
           }
         />
 
-        {/* ⚪ White-link Pages */}
+        {/* ⚪ White-Link Pages */}
         <Route
           path="/pages/white-link/StudyAb"
           element={
@@ -169,7 +171,6 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
-
         <Route
           path="/pages/white-link/Find1"
           element={
@@ -178,7 +179,6 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
-
         <Route
           path="/pages/white-link/IELTS"
           element={
@@ -188,128 +188,51 @@ export default function App() {
           }
         />
 
-        {/* Student Essentials Routes */}
+        {/* 🎓 Student Essentials */}
         <Route
           path="/pages/white-link/Student_Essentials"
           element={
             <WhiteLinkLayout>
               <Student />
-             
-            
+            </WhiteLinkLayout>
+          }
+        />
 
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/StudentEssFrom"
-          element={
-            <WhiteLinkLayout>
-              <StudentEssFrom />
-            </WhiteLinkLayout>
-          }
-        />
+        {[
+          ["EducationLoan", EducationLoan],
+          ["HealthInsurance", HealthInsurance],
+          ["Money_Transfer", MoneyTransfer],
+          ["StudentBanking", StudentBanking],
+          ["Accommodation", Accommodation],
+          ["InternationalSimCards", InternationalSimCards],
+          ["Guardian_Ship", Guardian_Ship],
+          ["ForexCards", ForexCards],
+          ["ISIC", ISIC],
+        ].map(([pathName, Component]) => (
           <Route
-          path="/pages/white-link/Student_Essentials/ServicesSection"
-          element={
-            <WhiteLinkLayout>
-                <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/EducationLoan"
-          element={
-            <WhiteLinkLayout>
-              <EducationLoan />
-              <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-
-        <Route
-          path="/pages/white-link/Student_Essentials/HealthInsurance"
-          element={
-            <WhiteLinkLayout>
-              <HealthInsurance />
-               <StudentEssFrom />
-               <ServicesSection/>
-
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/StudentBanking"
-          element={
-            <WhiteLinkLayout>
-              <StudentBanking />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/Accommodation"
-          element={
-            <WhiteLinkLayout>
-
-              <Accommodation />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/InternationalSimCards"
-          element={
-            <WhiteLinkLayout>
-              <InternationalSimCards />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/GuardianShip"
-          element={
-            <WhiteLinkLayout>
-              <GuardianShip />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/ForexCards"
-          element={
-            <WhiteLinkLayout>
-              <ForexCards />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/pages/white-link/Student_Essentials/ISIC"
-          element={
-            <WhiteLinkLayout>
-              <ISIC />
-               <StudentEssFrom />
-               <ServicesSection/>
-            </WhiteLinkLayout>
-          }
-        />
+            key={pathName}
+            path={`/pages/white-link/Student_Essentials/${pathName}`}
+            element={
+              <WhiteLinkLayout>
+                <Component />
+                {pathName === "Money_Transfer" && <StudyAbroadPromo />}
+                <StudentEssFrom />
+                <EssentialsCards />
+                <ServicesSection />
+              </WhiteLinkLayout>
+            }
+          />
+        ))}
 
         <Route
           path="/pages/white-link/Avail"
           element={
             <WhiteLinkLayout>
               <Avail />
-               
-               
             </WhiteLinkLayout>
           }
         />
+
         <Route
           path="/pages/white-link/SignIN"
           element={
@@ -318,6 +241,7 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
+
         <Route
           path="/pages/white-link/Sign_Up"
           element={
@@ -327,7 +251,7 @@ export default function App() {
           }
         />
 
-        {/* 404 Page */}
+        {/* ❌ 404 Page */}
         <Route
           path="*"
           element={

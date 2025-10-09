@@ -4,20 +4,16 @@
   padding: 60px 20px;
   background-color:#e7bee6;
   border-radius: 30px;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .contact-container {
-  width: 100%;
-  max-width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 /* ===== Left Section (Form) ===== */

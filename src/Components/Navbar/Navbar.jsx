@@ -8,7 +8,7 @@ import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
 // Black bar dropdown data
 const balckDropworn = {
   "Find-us": {
-    path: "/pages/Find",
+    path: "/pages/black-link/Find/Find",
     items: [
       { label: "IDP Australia", path: "/pages/Find" },
       { label: "IDP Bahrain", path: "/pages/Find" },
@@ -41,8 +41,8 @@ const dropdownData = {
     path: "/pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb",
     items: [
       { label: "Why study abroad?", path: "/pages/white-link/StudyAb" },
-      { label: "Where and what to study?", path: "/pages/white-link/StudyAb" },
-      { label: "How do I apply?", path: "/pages/white-link/StudyAb" },
+      { label: "Where and what to study?", path: "/pages/white-link/where-to-study-abroad" },
+      { label: "How do I apply?", path: "/pages/white-link/how-to-apply" },
       { label: "After receiving an offer", path: "/pages/white-link/StudyAb" },
       { label: "Prepare to depart", path: "/pages/white-link/StudyAb" },
       { label: "Arrive and thrive", path: "/pages/white-link/StudyAb" },
@@ -82,12 +82,12 @@ const dropdownData = {
   path: "/pages/white-link/Student_Essentials",
   items: [
     { label: "Education Loan", path: "/pages/white-link/Student_Essentials/EducationLoan" },
-    { label: "Money Transfer", path: "/pages/white-link/Student_Essentials/ForexCards" },
+    { label: "Money Transfer", path: "/pages/white-link/Student_Essentials/Money_Transfer" },
     { label: "Health Insurance", path: "/pages/white-link/Student_Essentials/HealthInsurance" },
     { label: "Student Banking", path: "/pages/white-link/Student_Essentials/StudentBanking" },
     { label: "Accommodation", path: "/pages/white-link/Student_Essentials/Accommodation" },
     { label: "International SIM Cards", path: "/pages/white-link/Student_Essentials/InternationalSimCards" },
-    { label: "GuardianShip", path: "/pages/white-link/Student_Essentials/GuardianShip" },
+    { label: "Guardian_Ship", path: "/pages/white-link/Student_Essentials/Guardian_Ship" },
     { label: "Forex Cards", path: "/pages/white-link/Student_Essentials/ForexCards" },
     { label: "ISIC", path: "/pages/white-link/Student_Essentials/ISIC" },
   ],

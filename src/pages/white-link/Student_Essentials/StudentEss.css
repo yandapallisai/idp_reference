@@ -1,15 +1,17 @@
 .essentials-container {
   font-family: "Poppins", sans-serif;
-  padding: 40px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  
 }
 
 .breadcrumb {
-
-  font-size: 14px;
-  color: #666;
+ background-image: url(assets/ses-article-4-banner.webp);
+ background-size: cover;
+ height:150px;
+ width: 100%;
+ color:black;
 }
 
 .heading {
@@ -19,6 +21,7 @@
 }
 
 .recommend-section {
+  
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -56,11 +59,10 @@
   transition: 0.3s ease;
   box-sizing: border-box;
 }
-
 .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
-}
+} 
 
 .icon {
   font-size: 32px;
@@ -103,7 +105,7 @@
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:fill;
 }
 
 .banner-right {
@@ -165,16 +167,4 @@
   }
 }
 
-@media (max-width: 480px) {
-  .essentials-container {
-    padding: 15px;
-  }
-  
-  .heading {
-    font-size: 24px;
-  }
-  
-  .card {
-    padding: 20px 10px;
-  }
-}
+

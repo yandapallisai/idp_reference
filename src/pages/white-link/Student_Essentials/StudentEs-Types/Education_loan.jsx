@@ -66,6 +66,8 @@ const partners = [{
 ];
 
 const Education_loan = () => {
+
+  const [destination, setDestination] = useState("All destinations");
   const [selectedDestination, setSelectedDestination] = useState("All");
 
   const filteredPartners =
@@ -74,39 +76,44 @@ const Education_loan = () => {
       : partners.filter((p) => p.destinations.includes(selectedDestination));
 
   return (
-    <div className="education-loan-wrapper">
-      <div className="breadcrumb">
-        Study Abroad / Student Essentials / Study Abroad Loan
-      </div>
+    <div className="insurance-container">
+     
 
-      <div className="header">
-        <h1>Education Loan to Study Abroad</h1>
-      </div>
-
-      <div className="filter-section">
-        <p>Discover recommended products for your study destination.</p>
-        <select
-          className="filter-select"
-          onChange={(e) => setSelectedDestination(e.target.value)}
-        >
-          <option value="All">All destinations</option>
-          <option value="AU">Australia</option>
-          <option value="CA">Canada</option>
-          <option value="GB">UK</option>
-          <option value="US">USA</option>
-          <option value="IE">Ireland</option>
-          <option value="NZ">New Zealand</option>
-        </select>
-      </div>
-
-      <div className="description">
-        <h2>Education loan</h2>
-        <p>
-          We've partnered with trusted financial institutions to offer a
-          one-stop solution for education loans. Our partners help make your
-          study abroad journey convenient and simple.
+     
+         <div className="health-container">
+        {/* Breadcrumb */}
+        <p className="breadcrumb">
+          Study Abroad, Overseas Education... / Student Essentials /Education_loan
         </p>
+
+        {/* Heading */}
+        <h1 className="main-heading">
+          Education Loan services for International Students
+        </h1>
+
+        {/* Recommendation Section */}
+        <div className="recommend-box">
+          <p>Discover recommended products for your study destination.</p>
+          <select
+            className="destination-dropdown"
+            value={destination}
+            onChange={(e) => setDestination(e.target.value)}
+          >
+            <option>All destinations</option>
+            <option>Australia</option>
+            <option>UK</option>
+            <option>Canada</option>
+            <option>USA</option>
+          </select>
+        </div>
+       
+       
       </div>
+
+
+
+     
+     
 
       <div className="partner-grid">
         {filteredPartners.map((bank, i) => (

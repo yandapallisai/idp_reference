@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './Find.css'
 const Find = () => {
   return (
     <div>
-      <h1>Find</h1>
+      <h1></h1>
     </div>
   )
 }
