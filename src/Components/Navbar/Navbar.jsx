@@ -37,6 +37,20 @@ const styles = {
     cursor: "pointer",
     position: "relative",
   },
+  secondLevelMenu: {
+    position: "absolute",
+    top: 0,
+    left: "100%",
+    backgroundColor: "#f5f5f5",
+    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
+    listStyle: "none",
+    padding: "10px 0",
+    marginTop: 0,
+    borderRadius: "4px",
+    zIndex: 1001,
+    minWidth: 260,
+    height: "100%",
+  },
 };
 const balckDropworn ={"Find-us": {
     path: "/pages/Find",
@@ -60,8 +74,8 @@ const dropdownData = {
     path: "/pages/white-link/StudyAb",
     items: [
       { label: "Why study abroad?", path: "/pages/white-link/StudyAb" },
-      { label: "Where and what to study?", path: "/pages/white-link/where-to-study-abroad" },
-      { label: "How do I apply?", path: "/pages/white-link/how-to-apply" },
+      { label: "Where and what to study?", path: "/pages/white-link/StudyAb" },
+      { label: "How do I apply?", path: "/pages/white-link/StudyAb" },
       { label: "After receiving an offer", path: "/pages/white-link/StudyAb" },
       { label: "Prepare to depart", path: "/pages/white-link/StudyAb" },
       { label: "Arrive and thrive", path: "/pages/white-link/StudyAb" },
@@ -80,20 +94,21 @@ const dropdownData = {
   "Find-a-course": {
     path: "/pages/white-link/Find1",
     items: [
-      { label: "Undergraduate", path: "/pages/white-link/Find1" },
-      { label: "Postgraduate", path: "/pages/white-link/Find1" },
-      { label: "Diploma", path: "/pages/white-link/Find1" },
-      { label: "Certificate", path: "/pages/white-link/Find1" },
-      { label: "Short Courses", path: "/pages/white-link/Find1" },
+      { label: "Course Advice", path: "/pages/CourseA" },
+      { label: "Courses with Instant Offer", path: "/pages/Courseof" },
+      { label: "Study Abroad cources", path: "/pages/Sabroad" },
+      { label: "Find scholorships", path: "/pages/Scholar" },
+      { label: "Find Universities", path: "/pages/FindU" },
+      { label: "University Rankings - THE", path: "/pages/Uranking" },
+      { label: "Complete University Guide (CUG)", path: "/pages/Cug" },
     ],
   },
-  IELTS: {
+  "IELTS": {
     path: "/pages/white-link/IELTS",
     items: [
-      { label: "IELTS Academic", path: "/pages/white-link/IELTS" },
-      { label: "IELTS General Training", path: "/pages/white-link/IELTS" },
-      { label: "IELTS Preparation", path: "/pages/white-link/IELTS" },
-      { label: "Test Dates", path: "/pages/white-link/IELTS" },
+      { label: "Book an IELTS Test", path: "/pages/Book" },
+      { label: "What is IELTS?", path: "/pages/what" },
+      { label: "IELTS Preparation", path: "/pages/Prep" },
     ],
   },
   "Student-essentials": {
@@ -107,9 +122,20 @@ const dropdownData = {
   },
 };
 
+// Second-level submenu for specific items
+const submenuData = {
+  "University Rankings - THE": [
+    { label: "QS World University Rankings", path: "/pages/Qsworld" },
+  ],
+};
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSecondLevel, setOpenSecondLevel] = useState(null);
+  const [dropdownHeight, setDropdownHeight] = useState(null);
+
+  const dropdownRef = React.useRef(null);
 
   const toggleDropdown = (key) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
@@ -117,6 +143,7 @@ const Navbar = () => {
 
   const closeDropdown = () => {
     setOpenDropdown(null);
+    setOpenSecondLevel(null);
   };
 
   const toggleMobileMenu = () => {
@@ -135,12 +162,20 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (openDropdown && dropdownRef.current) {
+      setDropdownHeight(dropdownRef.current.clientHeight);
+    } else {
+      setDropdownHeight(null);
+    }
+  }, [openDropdown]);
+
   return (
     <>
       {/* Top Black Bar with quick links */}
      
      {/* Top Black Bar with quick links */}
-<div className="black-container" style={{ position: "relative",  zIndex: 9999 }}>
+<div className="black-container" style={{ position: "sticky", top: 0, zIndex: 9999 }}>
   <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
     <li className="black-li">
       <Link to="/pages/NewAndA">News and articles</Link>
@@ -230,9 +265,14 @@ const Navbar = () => {
               </button>
 
               {openDropdown === key && (
-                <ul style={styles.dropdownMenu}>
+                <ul style={styles.dropdownMenu} ref={dropdownRef}>
                   {items.items.map((item, idx) => (
-                    <li key={idx} style={styles.dropdownItem}>
+                    <li
+                      key={idx}
+                      style={styles.dropdownItem}
+                      onMouseEnter={() => setOpenSecondLevel(item.label)}
+                      onMouseLeave={() => setOpenSecondLevel(null)}
+                    >
                       <Link
                         to={item.path}
                         onClick={closeDropdown}
@@ -240,6 +280,25 @@ const Navbar = () => {
                       >
                         {item.label}
                       </Link>
+
+                      {submenuData[item.label] && openSecondLevel === item.label && (
+                        <ul style={{
+                          ...styles.secondLevelMenu,
+                          height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
+                        }}>
+                          {submenuData[item.label].map((sub, sIdx) => (
+                            <li key={sIdx} style={styles.dropdownItem}>
+                              <Link
+                                to={sub.path}
+                                onClick={closeDropdown}
+                                style={{ color: "#161111ff", textDecoration: "none" }}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
