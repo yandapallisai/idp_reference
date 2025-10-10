@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 
 const Guardian_Ship = () => {
     const [destination, setDestination] = useState("All destinations");
@@ -7,12 +8,12 @@ const Guardian_Ship = () => {
       <div className="health-container">
         {/* Breadcrumb */}
         <p className="breadcrumb">
-          Study Abroad, Overseas Education... / Student Essentials / Money Transfer
+          Study Abroad, Overseas Education... / Student Essentials / Guardian ship
         </p>
 
         {/* Heading */}
         <h1 className="main-heading">
-          Money Transfer services for International Students
+          Guardian ship services for International Students
         </h1>
 
         {/* Recommendation Section */}
@@ -30,16 +31,11 @@ const Guardian_Ship = () => {
             <option>USA</option>
           </select>
         </div>
-
-       
-       
-       
-       
       </div>
 
       {/* Top Banner */}
       <section className="insurance-banner">
-        <h1>Money Transfer for International Students</h1>
+        <h1>Guardian ship for International Students</h1>
         <p>
           Ensure peace of mind while studying abroad. Get coverage for doctor visits,
           hospital stays, emergency ambulance services, and prescription medicine.

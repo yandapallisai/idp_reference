@@ -29,7 +29,7 @@ export default function StudentEssFrom() {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact1-page">
       <div className="contact-container">
         {/* LEFT SIDE */}
         <div className="contact-left">

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./StudentEss.css";
 import StudentEssFrom from "./StudentEssFrom/StudentEssFrom";
 import ServicesSection from "./StudentEssFrom/ServiceSection";
 import EssentialsCards from "./StudentEssFrom/EssentialsCards";
 
-
-
-
 const Student = () => {
+  const navigate = useNavigate(); // Initialize navigate
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -36,9 +36,12 @@ const Student = () => {
     alert("Form submitted successfully!");
   };
 
+  const handleChange = () => {
+    navigate("/pages/white-link/Sign_Up"); // Navigate to Sign Up page
+  };
+
   return (
     <div className="essentials-container">
-      <div></div>
       <p className="breadcrumb">
         Study Abroad, Overseas Education... / Student Essentials Services...
       </p>
@@ -55,13 +58,12 @@ const Student = () => {
           <option>USA</option>
         </select>
       </div>
-     
-     
+
       {/* Bottom Section */}
       <div className="bottom-banner">
         <div className="banner-left">
           <img
-            src="./assets/MAY19-ARTICLE-WEB-13.jpg_.webp"
+            src="/assets/Blue Modern Study Counseling Banner.png"
             alt="Students"
             className="banner-img"
           />
@@ -69,7 +71,9 @@ const Student = () => {
         <div className="banner-right">
           <h2>Simplifying your study abroad experience.</h2>
           <p>Watch how we take care of the boring stuff, so you don’t have to.</p>
-          <button className="free-btn">Avail FREE counselling</button>
+          <button onClick={handleChange} className="free-btn">
+            Sign Up for Free
+          </button>
         </div>
       </div>
 
