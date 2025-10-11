@@ -1,0 +1,143 @@
+.std-aust-container{
+    background-color: white;
+    padding: 2rem 4rem;
+    text-align: justify;
+    color: black;
+    gap:2rem;
+}
+
+.study-australia {
+  width:100%;
+  margin:3rem;
+
+  
+  line-height: 1.7;
+}
+
+/* Heading */
+.study-australia h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* Highlight tagline */
+.study-australia .highlight {
+  background: linear-gradient(90deg, #0066cc1a, #00bfa61a);
+  color: #004b91;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-left: 4px solid #0066cc;
+  border-radius: 6px;
+  margin-bottom: 22px;
+}
+
+/* Content */
+.study-australia .content p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Section Heading */
+.study-australia h2 {
+  font-size: 1.4rem;
+  margin: 28px 0 16px;
+  color: #0ea5a4;
+  border-bottom: 2px solid #0ea5a4;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Benefits box */
+.benefit {
+  background: #f9fafb;
+  border-left: 4px solid #0ea5a4;
+  padding: 16px 18px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+/* Benefit title */
+.benefit h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #0066cc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .study-australia {
+    padding: 20px;
+  }
+
+  .study-australia h1 {
+    font-size: 1.5rem;
+  }
+
+  .benefit h3 {
+    font-size: 1rem;
+  }
+}
+
+
+.video-container{
+    height:350px;
+    width:600px;
+    margin-top:2rem;
+}
+
+.australia-update {
+  width: 100%;
+  max-width: 100%;
+  padding: 32px;
+  background: #ebeaea;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+.cost{
+    width:100%;
+
+}
+
+.aush-cost-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.aush-cost-table tr {
+  padding: 12px 14px;
+  border: 2px solid #000000;
+  
+  color: #374151;
+}
+.aush-cost-table th {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  white-space: nowrap;
+}
+table{
+    background-color: whitesmoke;
+}
+
+.cost p{
+    line-height: 2;
+}
+.cost button{
+    margin:2rem;
+
+}

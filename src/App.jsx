@@ -11,7 +11,7 @@ import English from "./pages/black-link/English";
 import Events from "./pages/black-link/Events";
 import Find from "./pages/black-link/Find";
 import Fastlane from "./Components/Fastlane/Fastlane";
-import IDP from "./Components/IdpStudents/idp";
+import IDP from "./Components/IdpStudents/IDP";
 import Essentials from "./Components/Essentials/Essentials";
 import Aboutidp from "./Components/IDP-P/Aboutidp";
 import StudySteps from "./Components/StudySteps/StudySteps";
@@ -20,9 +20,9 @@ import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import StudyAb from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb";
 import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
 
-import Student from "./pages/white-link/Student Essentials/Student";
-import Avail from "./pages/white-link/Avail Free/Avail";
-import SignIN from "./pages/white-link/Sign In/SignIN";
+import Student from "./pages/white-link/Student_Essentials/Student.jsx";
+import Avail from "./pages/white-link/Avail_Free/Avail.jsx";
+import SignIN from "./pages/white-link/Sign_In/SignIN.jsx";
 import Import from "./Components/Implinks/Import";
 import BlueNav from "./Components/bLUE-nav/BlueNav";
 import NewAndA from "./pages/black-link/NewAndA";
@@ -30,8 +30,8 @@ import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice"
 import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
 import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
-import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
-import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
+import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar";
+
 import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
@@ -39,15 +39,7 @@ import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
 import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
-=======
-import IELTS from "./pages/white-link/IELTS/IELTS";
-import Student from "./pages/white-link/Student_Essentials/Student";
-import Find1 from "./pages/white-link/Find_A_Course/Find1";
-import Avail from "./pages/white-link/Avail_Free/Avail";
-import SignIN from "./pages/white-link/Sign_In/SignIN";
-import Import from "./Components/Implinks/Import";
-import BlueNav from "./Components/bLUE-nav/BlueNav";
-import NewAndA from "./pages/black-link/NewAndA";
+
 
 
 import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
@@ -81,6 +73,8 @@ import ArrivethriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/A
 import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
 import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
 import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
+import StdyAushero from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAushero";
+import StdyAustcnt from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAustcnt.jsx";
 
 
 // Layout wrapper for white-link pages
@@ -168,7 +162,7 @@ export default function App() {
           element={
             <>
               <Navbar />
-              <FindU/>
+              
               <Oneac />
               <Fastlane />
               <Footer />
@@ -436,13 +430,23 @@ export default function App() {
             
             </>
           } />
+        <Route path="/pages/white-link/StudyDestinations/StudyInAustralia" element={
+          <>
+            <Navbar />
+            <StdyAushero />
+            <StdyAustcnt />
+            <Contact />
+            <Footer />
+          </>
+        } />
+        
 
 
+          
 
 
-
-        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout><Find1 /></WhiteLinkLayout>} />
-        <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><IELTS /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><ComingSoon /></WhiteLinkLayout>} />
 
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />

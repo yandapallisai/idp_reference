@@ -84,7 +84,7 @@ const dropdownData = {
   "Study-destinations": {
     path: "/pages/white-link/StudyDs",
     items: [
-      { label: "Study in Australia", path: "/pages/white-link/StudyDs" },
+      { label: "Study in Australia", path: "/pages/white-link/StudyDestinations/StudyInAustralia" },
       { label: "Study in Canada", path: "/pages/white-link/StudyDs" },
       { label: "Study in Ireland", path: "/pages/white-link/StudyDs" },
       { label: "Study in UK", path: "/pages/white-link/StudyDs" },
@@ -252,9 +252,12 @@ const Navbar = () => {
               onMouseEnter={() => setOpenDropdown(key)}
               onMouseLeave={closeDropdown}
             >
-              <button
+              <Link
+                to={items.path}
                 style={styles.navButton}
-                onClick={() => toggleDropdown(key)}
+                onClick={(e) => {
+                  toggleDropdown(key);
+                }}
                 aria-haspopup="true"
                 aria-expanded={openDropdown === key}
               >
@@ -263,7 +266,7 @@ const Navbar = () => {
                   .map((w) => w[0].toUpperCase() + w.slice(1))
                   .join(" ")}{" "}
                 <FontAwesomeIcon icon={faAngleDown} />
-              </button>
+              </Link>
 
               {openDropdown === key && (
                 <ul style={styles.dropdownMenu} ref={dropdownRef}>
