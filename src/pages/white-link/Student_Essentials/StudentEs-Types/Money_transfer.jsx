@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import Related_Articles from '../../../Related_Articles/Related_Articles';
 
 
 
@@ -84,6 +85,7 @@ const  Money_transfer = () => {
           <button className="option-btn">Apply Now</button>
         </div>
       </section>
+      <Related_Articles/>
     </div>
   );
 };

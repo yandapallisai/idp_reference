@@ -1,4 +1,5 @@
 import React from 'react';
+import Related_Articles from '../../../Related_Articles/Related_Articles';
 
 const Accommodation = () => {
   const [destination, setDestination] = React.useState("All destinations");
@@ -66,6 +67,7 @@ const Accommodation = () => {
           <button className="option-btn">Apply Now</button>
         </div>
       </section>
+      <Related_Articles/>
     </div>
    
   );

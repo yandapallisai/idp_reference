@@ -74,7 +74,8 @@
   }
 }
 
-/* Mobile view → improved layout */
+
+
 @media (max-width: 768px) {
   .essentials-section {
     padding: 3rem 0;

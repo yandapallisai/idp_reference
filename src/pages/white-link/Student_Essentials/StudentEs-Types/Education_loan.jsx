@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Education_loan.css";
+import Related_Articles from "../../../Related_Articles/Related_Articles";
 
 const partners = [{
     name: "ICICI Bank iSMART Education Loans",
@@ -141,6 +142,7 @@ const Education_loan = () => {
           </div>
         ))}
       </div>
+      <Related_Articles/>
     </div>
   );
 };

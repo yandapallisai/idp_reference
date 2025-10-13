@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Related_Articles from "../../../Related_Articles/Related_Articles";
 
 const International_SIM_Cards = () => {
   const [destination, setDestination] = useState("All destinations");
@@ -32,6 +33,7 @@ const International_SIM_Cards = () => {
           </select>
         </div>
       </div>
+      <Related_Articles/>
     </div>
   );
 };
