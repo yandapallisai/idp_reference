@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import Services from "./Components/Services/Services";
 import Destinations from "./Components/Destination/Destinations";
-import Hero from "./Components/Hero/Hero"; 
+import Hero from "./Components/Hero/Hero";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Import from "./Components/Implinks/Import";
 import Fastlane from "./Components/Fastlane/Fastlane";
@@ -15,7 +15,7 @@ import IDP from "./Components/IdpStudents/IDP";
 import Essentials from "./Components/Essentials/Essentials";
 import Aboutidp from "./Components/IDP-P/Aboutidp";
 import StudySteps from "./Components/StudySteps/StudySteps";
-import BlueNav from "./Components/bLUE-nav/BlueNav"; 
+import BlueNav from "./Components/bLUE-nav/BlueNav";
 
 // Black-Link Pages
 import English from "./pages/black-link/English";
@@ -33,10 +33,13 @@ import SignIN from "./pages/white-link/Sign_In/SignIN";
 import Sign_Up from "./pages/white-link/Sign_Up/Sign_Up";
 
 // Study Abroad
+import WhyStudyAbroadPage from "./pages/white-link/Study_Abroad/WhyStudyAbroadPage";
+import AfterOfferPage from "./pages/white-link/Study_Abroad/AfterOfferPage";
+import HowToApplyPage from "./pages/white-link/Study_Abroad/HowToApplyPage";
+import WhereToStudyPage from "./pages/white-link/Study_Abroad/WhereToStudyPage";
+import PrepareToDepartPage from "./pages/white-link/Study_Abroad/PrepareToDepartPage";
+import ArriveAndThrivePage from "./pages/white-link/Study_Abroad/ArriveAndThrivePage";
 import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
-import StdyAbVid from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbVid";
-import StdyAbcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbcnt";
-import StudyAb from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb";
 
 // Student Essentials
 import Student from "./pages/white-link/Student_Essentials/Student";
@@ -53,6 +56,10 @@ import ServicesSection from "./pages/white-link/Student_Essentials/StudentEssFro
 import EssentialsCards from "./pages/white-link/Student_Essentials/StudentEssFrom/EssentialsCards";
 import MoneyTransfer from "./pages/white-link/Student_Essentials/StudentEs-Types/Money_transfer";
 import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo";
+import ShortList from "./Components/ShortList/ShortList";
+import Related_Articles from "./pages/Related_Articles/Related_Articles";
+import FindH from "./pages/black-link/Find/FindH";
+
 
 // ✅ Layout for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -86,6 +93,16 @@ export default function App() {
               <Aboutidp />
               <Footer />
             </>
+          }
+        />
+
+        {/* ⚙️ Services Page */}
+        <Route
+          path="/services"
+          element={
+            <WhiteLinkLayout>
+              <Services />
+            </WhiteLinkLayout>
           }
         />
 
@@ -135,11 +152,12 @@ export default function App() {
           }
         />
         <Route
-          path="/pages/Find/Find"
+          path="/pages/black-link/Find/Find"
           element={
             <>
               <Navbar />
               <BlueNav />
+              <FindH/>
               <Find />
               <Footer />
             </>
@@ -148,21 +166,71 @@ export default function App() {
 
         {/* ⚪ White-Link Pages */}
         <Route
-          path="/pages/white-link/StudyAb"
+          path="/study-abroad/why-study-abroad"
           element={
-            <>
-              <Navbar />
+            <WhiteLinkLayout>
               <StudyAbNavbar />
-              <StudyAb />
-              <StdyAbVid />
-              <StdyAbcnt />
+              <WhyStudyAbroadPage />
               <NewAndA />
               <Contact />
-              <Footer />
-            </>
+            </WhiteLinkLayout>
           }
         />
-
+        <Route
+          path="/study-abroad/how-to-apply"
+          element={
+            <WhiteLinkLayout>
+              <StudyAbNavbar />
+              <HowToApplyPage />
+              <NewAndA />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-abroad/where-to-study"
+          element={
+            <WhiteLinkLayout>
+              <StudyAbNavbar />
+              <WhereToStudyPage />
+              <NewAndA />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-abroad/after-offer"
+          element={
+            <WhiteLinkLayout>
+              <StudyAbNavbar />
+              <AfterOfferPage />
+              <NewAndA />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-abroad/prepare-to-depart"
+          element={
+            <WhiteLinkLayout>
+              <StudyAbNavbar />
+              <PrepareToDepartPage />
+              <NewAndA />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-abroad/arrive-and-thrive"
+          element={
+            <WhiteLinkLayout>
+              <StudyAbNavbar />
+              <ArriveAndThrivePage />
+              <NewAndA />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
         <Route
           path="/pages/white-link/StudyDestinations/StudyDs"
           element={
@@ -208,6 +276,7 @@ export default function App() {
           ["Guardian_Ship", Guardian_Ship],
           ["ForexCards", ForexCards],
           ["ISIC", ISIC],
+          ["Travel_Support", ComingSoon],
         ].map(([pathName, Component]) => (
           <Route
             key={pathName}
@@ -234,6 +303,16 @@ export default function App() {
         />
 
         <Route
+          path="/pages/Related_Articles"
+          element={
+            <WhiteLinkLayout>
+              <Related_Articles />
+            </WhiteLinkLayout>
+          }
+        />
+
+
+        <Route
           path="/pages/white-link/SignIN"
           element={
             <WhiteLinkLayout>
@@ -250,6 +329,26 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
+
+        <Route
+          path="/ShortList"
+          element={
+            <WhiteLinkLayout>
+              <ShortList />
+            </WhiteLinkLayout>
+          }
+        />
+
+        {/* 🚧 Coming Soon Page */}
+        <Route
+          path="/coming-soon"
+          element={
+            <WhiteLinkLayout>
+              <ComingSoon />
+            </WhiteLinkLayout>
+          }
+        />
+
 
         {/* ❌ 404 Page */}
         <Route

@@ -8,28 +8,28 @@ import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
 // Black bar dropdown data
 const balckDropworn = {
   "Find-us": {
-    path: "/pages/black-link/Find/Find",
+    path: "/pages/black-link/Find",
     items: [
-      { label: "IDP Australia", path: "/pages/Find" },
-      { label: "IDP Bahrain", path: "/pages/Find" },
-      { label: "IDP Bangladesh", path: "/pages/Find" },
-      { label: "IDP Cambodia", path: "/pages/Find" },
-      { label: "IDP Canada", path: "/pages/Find" },
-      { label: "IDP China", path: "/pages/Find" },
-      { label: "IDP Egypt", path: "/pages/Find" },
-      { label: "IDP Ghana", path: "/pages/Find" },
-      { label: "IDP Hong Kong", path: "/pages/Find" },
-      { label: "IDP Indonesia", path: "/pages/Find" },
-      { label: "IDP Iran", path: "/pages/Find" },
-      { label: "IDP Jordan", path: "/pages/Find" },
-      { label: "IDP Kenya", path: "/pages/Find" },
-      { label: "IDP Korea", path: "/pages/Find" },
-      { label: "IDP Kuwait", path: "/pages/Find" },
-      { label: "IDP Lebanon", path: "/pages/Find" },
-      { label: "IDP Malaysia", path: "/pages/Find" },
-      { label: "IDP Mauritius", path: "/pages/Find" },
-      { label: "IDP Middle East", path: "/pages/Find" },
-      { label: "IDP Nepal", path: "/pages/Find" },
+      { label: "IDP Australia", path: "/find-us/australia" },
+      { label: "IDP Bahrain", path: "/find-us/bahrain" },
+      { label: "IDP Bangladesh", path: "/find-us/bangladesh" },
+      { label: "IDP Cambodia", path: "/find-us/cambodia" },
+      { label: "IDP Canada", path: "/find-us/canada" },
+      { label: "IDP China", path: "/find-us/china" },
+      { label: "IDP Egypt", path: "/find-us/egypt" },
+      { label: "IDP Ghana", path: "/find-us/ghana" },
+      { label: "IDP Hong Kong", path: "/find-us/hong-kong" },
+      { label: "IDP Indonesia", path: "/find-us/indonesia" },
+      { label: "IDP Iran", path: "/find-us/iran" },
+      { label: "IDP Jordan", path: "/find-us/jordan" },
+      { label: "IDP Kenya", path: "/find-us/kenya" },
+      { label: "IDP Korea", path: "/find-us/korea" },
+      { label: "IDP Kuwait", path: "/find-us/kuwait" },
+      { label: "IDP Lebanon", path: "/find-us/lebanon" },
+      { label: "IDP Malaysia", path: "/find-us/malaysia" },
+      { label: "IDP Mauritius", path: "/find-us/mauritius" },
+      { label: "IDP Middle East", path: "/find-us/middle-east" },
+      { label: "IDP Nepal", path: "/find-us/nepal" },
     ],
   },
 };
@@ -38,14 +38,14 @@ const balckDropworn = {
 
 const dropdownData = {
   "Study-abroad-steps": {
-    path: "/pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb",
+    path: "/study-abroad/why-study-abroad",
     items: [
-      { label: "Why study abroad?", path: "/pages/white-link/StudyAb" },
-      { label: "Where and what to study?", path: "/pages/white-link/where-to-study-abroad" },
-      { label: "How do I apply?", path: "/pages/white-link/how-to-apply" },
-      { label: "After receiving an offer", path: "/pages/white-link/StudyAb" },
-      { label: "Prepare to depart", path: "/pages/white-link/StudyAb" },
-      { label: "Arrive and thrive", path: "/pages/white-link/StudyAb" },
+      { label: "Why study abroad?", path: "/study-abroad/why-study-abroad" },
+      { label: "Where and what to study?", path: "/study-abroad/where-to-study" },
+      { label: "How do I apply?", path: "/study-abroad/how-to-apply" },
+      { label: "After receiving an offer", path: "/study-abroad/after-offer" },
+      { label: "Prepare to depart", path: "/study-abroad/prepare-to-depart" },
+      { label: "Arrive and thrive", path: "/study-abroad/arrive-and-thrive" },
     ],
   },
   "Study-destinations": {
@@ -79,19 +79,19 @@ const dropdownData = {
   },
 
   "Student-essentials": {
-  path: "/pages/white-link/Student_Essentials",
-  items: [
-    { label: "Education Loan", path: "/pages/white-link/Student_Essentials/EducationLoan" },
-    { label: "Money Transfer", path: "/pages/white-link/Student_Essentials/Money_Transfer" },
-    { label: "Health Insurance", path: "/pages/white-link/Student_Essentials/HealthInsurance" },
-    { label: "Student Banking", path: "/pages/white-link/Student_Essentials/StudentBanking" },
-    { label: "Accommodation", path: "/pages/white-link/Student_Essentials/Accommodation" },
-    { label: "International SIM Cards", path: "/pages/white-link/Student_Essentials/InternationalSimCards" },
-    { label: "Guardian_Ship", path: "/pages/white-link/Student_Essentials/Guardian_Ship" },
-    { label: "Forex Cards", path: "/pages/white-link/Student_Essentials/ForexCards" },
-    { label: "ISIC", path: "/pages/white-link/Student_Essentials/ISIC" },
-  ],
-},
+    path: "/pages/white-link/Student_Essentials",
+    items: [
+      { label: "Education Loan", path: "/pages/white-link/Student_Essentials/EducationLoan" },
+      { label: "Money Transfer", path: "/pages/white-link/Student_Essentials/Money_Transfer" },
+      { label: "Health Insurance", path: "/pages/white-link/Student_Essentials/HealthInsurance" },
+      { label: "Student Banking", path: "/pages/white-link/Student_Essentials/StudentBanking" },
+      { label: "Accommodation", path: "/pages/white-link/Student_Essentials/Accommodation" },
+      { label: "International SIM Cards", path: "/pages/white-link/Student_Essentials/InternationalSimCards" },
+      { label: "Guardian_Ship", path: "/pages/white-link/Student_Essentials/Guardian_Ship" },
+      { label: "Forex Cards", path: "/pages/white-link/Student_Essentials/ForexCards" },
+      { label: "ISIC", path: "/pages/white-link/Student_Essentials/ISIC" },
+    ],
+  },
 
 
 };
@@ -154,9 +154,9 @@ const Navbar = () => {
               >
                 {/* Special Button on Top */}
                 <li >
-                  <Link to="/pages/Find" style={{ textDecoration: "none" }}>
+                  <Link to="/pages/black-link/Find/Find" style={{ textDecoration: "none" }}>
                     <button
-                    
+
                     >
                       Find nearest IDP Offices
                     </button>
@@ -239,9 +239,11 @@ const Navbar = () => {
         </div>
 
         <div className="right-icons">
-          <Link to="#" className="icon-btn heart">
+
+          <Link to="/ShortList" className="icon-btn heart">
             <FontAwesomeIcon icon={faRegularHeart} />
           </Link>
+
           <Link to="/pages/white-link/SignIN" className="icon-btn account">
             <FontAwesomeIcon icon={faUser} />
           </Link>

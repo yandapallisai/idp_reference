@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Health_Insurance.css";
+import Related_Articles from "../../../Related_Articles/Related_Articles";
 
 const Health_Insurance = () => {
   const [destination, setDestination] = useState("All destinations");
@@ -71,6 +72,7 @@ const Health_Insurance = () => {
           <button className="option-btn">Apply Now</button>
         </div>
       </section>
+      <Related_Articles/>
     </div>
   );
 };

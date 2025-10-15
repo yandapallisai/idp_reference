@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from 'react'
+import Related_Articles from "../../../Related_Articles/Related_Articles";
 
 const Forex_Cards = () => {
   const [destination, setDestination] = useState("All destinations");
@@ -70,6 +71,7 @@ const Forex_Cards = () => {
           <button className="option-btn">Apply Now</button>
         </div>
       </section>
+      <Related_Articles/>
     </div>
   )
 }
